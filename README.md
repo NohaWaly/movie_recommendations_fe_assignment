@@ -14,7 +14,7 @@ they are implemented.
 
 ![alt text](img.png)
 
-![alt text](img1.png)
+![alt text](img1.PNG)
 
 
 ## Features supported by the front end 
