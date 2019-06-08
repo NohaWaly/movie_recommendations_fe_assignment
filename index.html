@@ -1,195 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Movie Review | Review</title>
-
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="star.css">
-		
-		<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
-		<![endif]-->
-
-	</head>
-
-	<body onload="getRandomMedia()">
+<html>
+<head>
+   <!-- Loading Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		
 
-		<div id="site-content">
-			<header class="site-header">
-				<div class="container">
+	
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-					<!-- ThinkBIG Logo Start-->
-					<a href="http://think-big.solutions/" id="branding">
-						<img src="logo.png" width="130" height="100" alt="" class="logo">
-					</a>
-					<!-- ThinkBIG Logo End-->
+<style>
+ body{
+   background-image: url("images/64710.jpg");
+   background-size: cover;
+   padding-top:150px;
+ }
+#transparent{
+	background: rgba(255, 255, 255, 0.5);
+	padding: 40px;
+	padding-bottom: 20px; 
+	border-radius: 2%;
+}
+input[type=submit]{
+	margin: auto;
+}
+h1{
+	color: white;
+}
+p{
+	color: beige;
+}
 
-					<!-- Subscribe START-->
-					<div class="col-md-2" style="float: right">
-						<div class="contact-form">
-							<input type="submit"
-								   disabled=disabled
-								   value="Subscribe"
-								   style="display: block; margin-bottom:14px; width: 100%; height:90px ">
-						</div>
-					</div>
-					<!-- Subscribe End-->
+</style>
+</head>
+<body>
 
-					<!-- EMAIL & Authentication Token Handling START-->
-					<div class="col-md-2" style="float: right">
-						<div class="contact-form">
-							<input type="submit" value="Send Auth Token"
-								   style="display: block; margin-bottom:
-									   14px; width: 100%">
+      
+	<div class="slide"  data-stellar-background-ratio="0.5">
+	  <div class="container">
+	    <div class="row">
+			  <div class="col-lg-6 mb-4">
+				<h1>Movie Review</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
+				<p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary py-3 px-5 btn-pill">SIGN UP</a></p>
 
-							<input type="submit" value="Test Auth Token"
-								   style="display: block; width: 100%">
-						</div>
-					</div>
-
-					<div class="col-md-5" style="float: right">
-						<div class="contact-form">
-							<input id="email_input" type="text" class="email" placeholder="enter your email">
-							<input id="token_input" type="text" class="email" placeholder="enter your verification token">
-						</div>
-					</div>
-					<!-- EMAIL & Authentication Token Handling END-->
-				</div>
-
-			</header>
-
-
-			<main class="main-content">
-				<div class="container">
-					<div class="page">
-
-
-						<div class="filters">
-							<select name="#" id="#" placeholder="Choose Category">
-								<option value="#">Action</option>
-								<option value="#">Drama</option>
-								<option value="#">Fantasy</option>
-								<option value="#">Horror</option>
-								<option value="#">Adventure</option>
-							</select>
-							<select name="#" id="#">
-								<option value="#">2012</option>
-								<option value="#">2013</option>
-								<option value="#">2014</option>
-							</select>
-
-							<form class="search-form" style="float: right">
-								<input id="search_input" type="text" placeholder="Search...">
-								<button type="button"><i class="fa fa-search"></i></button>
-							</form>
-						</div>
-
-
-						<div id="media" class="movie-list">
-
-
-						</div> <!-- .movie-list -->
-
-
-
-					</div>
-
-				</div> <!-- .container -->
-			</main>
-
-
-
-
-
-
-			<footer class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Recent Review</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Help Center</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Join Us</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Social Media</h3>
-								<ul class="no-bullet">
-									<li>Facebook</li>
-									<li>Twitter</li>
-									<li>Google+</li>
-									<li>Pinterest</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Newsletter</h3>
-								<form action="#" class="subscribe-form">
-									<input type="text" placeholder="Email Address">
-								</form>
-							</div>
-						</div>
-					</div> <!-- .row -->
-
-					<div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
-				</div> <!-- .container -->
-
-			</footer>
-		</div>
-		<!-- Default snippet for navigation -->
+			  </div>
+             
+			  <div class="col-lg-5 ml-auto"  data-aos="fade-up" data-aos-delay="500">
+					<div id="transparent">	
+				<form action="signed.html" method="post" class="form-box">
+					
+				  <div class="form-group">
+					<input type="text" class="form-control" placeholder="Email Addresss">
+				  </div>
+				  <div class="form-group">
+					<input type="password" class="form-control" placeholder="Password">
+				  </div>
+				  <div class="form-group mb-4">
+					<input type="password" class="form-control" placeholder="Re-type Password">
+				  </div>
+				  <div class="form-group">
+					<input type="submit" class="btn btn-primary btn-pill" style="display: block; margin: 0 auto;"value="Login">
+				  </div>
+			
+				</form>
+			</div>
 		
+			  </div>
+			</div>
+			</div>
+		
+	</div>
 
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		<script src="js/capp.js"></script>
+  
 
-	</body>
+</body>
 
 </html>
