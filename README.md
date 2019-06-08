@@ -1,9 +1,6 @@
 # Movie Recommendations Fe Assignment
 This repository contains an assignment for our summer interns'19 candidates.
-
-## Description 
-In this assignment you are required to download the code in this repository 
-and update it "as you wish" adding your piece of mind. 
+and Here is some modifications.
 
 ## Ideation 
 This code is for the front-end we will be using with our movie recommendations 
@@ -16,6 +13,8 @@ lots of other features that we don't tell here ;) we'll keep it a surprise when
 they are implemented. 
 
 ![alt text](img.png)
+
+(img1.png)
 
 
 ## Features supported by the front end 
